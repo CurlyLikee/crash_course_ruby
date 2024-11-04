@@ -1,0 +1,57 @@
+require 'minitest/autorun'
+require 'minitest/reporters'
+require_relative 'student'
+
+Minitest::Reporters.use! Minitest::Reporters::HtmlReporter.new(
+  reports_dir: 'test/reports',
+  color: true,
+  mode: :clean
+)
+
+
+1. Spec Reporter (detailed output)
+ Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new(
+   color: true,           
+   slow_count: 5,          
+   detailed_skip: true,     
+   slow_threshold: 5,       
+   show_slow_tests: true   
+ )
+
+ 2. Progress Reporter (dots)
+ Minitest::Reporters.use! Minitest::Reporters::ProgressReporter.new(
+   detailed_skip: false,     
+   color: true             
+ )
+
+3. HTML Reporter
+ Minitest::Reporters.use! Minitest::Reporters::HtmlReporter.new(
+   reports_dir: 'test/reports',
+   color: true,
+   mode: :clean
+ )
+
+4. Multiple Reporters
+ Minitest::Reporters.use! [
+   Minitest::Reporters::SpecReporter.new,
+   Minitest::Reporters::HtmlReporter.new(reports_dir: 'test/reports'),
+   Minitest::Reporters::JUnitReporter.new('test/reports/junit')
+ ]
+
+5. Custom Reporter for Spec Style
+ class CustomSpecReporter < Minitest::Reporters::SpecReporter
+   def record(test)
+   super puts "\nTest:
+   puts "Time:
+     puts "Status:
+     puts "------------------"
+   end
+ end
+
+ Minitest::Reporters.use! CustomSpecReporter.new
+
+7. Mean Time Reporter (shows average test times)
+ Minitest::Reporters.use! Minitest::Reporters::MeanTimeReporter.new(
+   previous_runs_filename: 'test_times.txt',
+   report_filename: 'test/reports/test_times.txt'
+ )
