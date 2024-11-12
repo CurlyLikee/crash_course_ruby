@@ -6,7 +6,6 @@ RSpec.describe Student do
   let(:student2) { Student.new('Jane', 'Smith', Time.new(1999, 5, 15)) }
 
   before(:each) do
-    # Очищаем список студентов перед каждым тестом
     Student.clear_students
   end
 
@@ -54,7 +53,6 @@ RSpec.describe Student do
     end
   end
   RSpec.configure do |config|
-    # Добавление HTML-репортера
     config.add_formatter 'html', 'rspec_report.html'
   end
 end
