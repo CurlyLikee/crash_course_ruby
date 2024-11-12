@@ -1,0 +1,20 @@
+[33m7be9944[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{0}: checkout: moving from new-branch to main
+[33m5c69abb[m[33m ([m[1;32mnew-branch[m[33m)[m HEAD@{1}: commit: capybara
+[33m82f247f[m HEAD@{2}: checkout: moving from main to new-branch
+[33m82f247f[m HEAD@{3}: commit: capybara
+[33mc3b942c[m HEAD@{4}: pull origin main: updating HEAD
+[33mc3b942c[m HEAD@{5}: reset: moving to HEAD
+[33mc3b942c[m HEAD@{6}: reset: moving to HEAD
+[33mc3b942c[m HEAD@{7}: reset: moving to HEAD
+[33mc3b942c[m HEAD@{8}: reset: moving to HEAD
+[33mc3b942c[m HEAD@{9}: reset: moving to HEAD
+[33mc3b942c[m HEAD@{10}: pull origin main: updating HEAD
+[33mc3b942c[m HEAD@{11}: pull origin main: updating HEAD
+[33mc3b942c[m HEAD@{12}: reset: moving to HEAD
+[33mc3b942c[m HEAD@{13}: commit (merge): test
+[33m4668c64[m HEAD@{14}: commit: test
+[33mb86c055[m HEAD@{15}: reset: moving to HEAD
+[33mb86c055[m HEAD@{16}: Branch: renamed refs/heads/main to refs/heads/main
+[33mb86c055[m HEAD@{18}: reset: moving to HEAD
+[33mb86c055[m HEAD@{19}: Branch: renamed refs/heads/main to refs/heads/main
+[33mb86c055[m HEAD@{21}: commit (initial): first commit
